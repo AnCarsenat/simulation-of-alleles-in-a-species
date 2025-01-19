@@ -34,7 +34,7 @@ class Species:
 
         # Food distribution
         food = self.food_per_generation
-        weighted_population = sorted(self.population, key=lambda ind: self.alleles_data[ind.allele]['survivability'], reverse=True)
+        weighted_population = sorted(self.population, key=lambda ind: self.alleles_data[ind.allele]['fitness_score'], reverse=True)
         self.population = []
         for individual in weighted_population:
             if food > 0:
@@ -46,7 +46,7 @@ class Species:
         for individual in self.population:
             reproduction_rate = self.alleles_data[individual.allele]['reproduction_rate']
             if random.random() < reproduction_rate:
-                weighted_alleles = [allele for allele, data in self.alleles_data.items() for _ in range(data['survivability'])]
+                weighted_alleles = [allele for allele, data in self.alleles_data.items() for _ in range(data['fitness_score'])]
                 new_individuals.append(Individual(random.choice(weighted_alleles), parents=new_individuals))
         self.population.extend(new_individuals)
 
@@ -96,10 +96,10 @@ if __name__ == "__main__":
     generations = 500 # Adjust this value as needed this is how many generations the simulation will run for
     food_per_generation = 400  # Adjust this value as needed this is how much food is available per generation
     alleles_data = {
-        'Allele1': {'survivability': 2, 'mortality_rate': 0.1, 'reproduction_rate': 0.2}, # survivability is the number of times the allele is repeated in the weighted_population
-        'Allele2': {'survivability': 2, 'mortality_rate': 0.1, 'reproduction_rate': 0.2}, # mortality_rate is the probability of the individual dying
-        'Allele3': {'survivability': 2, 'mortality_rate': 0.1, 'reproduction_rate': 0.2}, # reproduction_rate is the probability of the individual reproducing
-        'Allele4': {'survivability': 2, 'mortality_rate': 0.1, 'reproduction_rate': 0.2}  # survivability, mortality_rate, and reproduction_rate can be adjusted as needed
+        'Allele1': {'fitness_score': 2, 'mortality_rate': 0.1, 'reproduction_rate': 0.2}, # survivability is the number of times the allele is repeated in the weighted_population
+        'Allele2': {'fitness_score': 2, 'mortality_rate': 0.1, 'reproduction_rate': 0.2}, # mortality_rate is the probability of the individual dying
+        'Allele3': {'fitness_score': 2, 'mortality_rate': 0.1, 'reproduction_rate': 0.2}, # reproduction_rate is the probability of the individual reproducing
+        'Allele4': {'fitness_score': 2, 'mortality_rate': 0.1, 'reproduction_rate': 0.2}  # survivability, mortality_rate, and reproduction_rate can be adjusted as needed
     }
 
     species_list = [Species(initial_population, alleles_data, food_per_generation)]
