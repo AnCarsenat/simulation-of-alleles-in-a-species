@@ -92,14 +92,14 @@ class Simulation:
         plt.show()
 
 if __name__ == "__main__":
-    initial_population = 40
-    generations = 500
-    food_per_generation = 400  # Adjust this value as needed
+    initial_population = 40 # Adjust this value as needed this is how many individuals are in the start population
+    generations = 500 # Adjust this value as needed this is how many generations the simulation will run for
+    food_per_generation = 400  # Adjust this value as needed this is how much food is available per generation
     alleles_data = {
-        'Allele1': {'survivability': 2, 'mortality_rate': 0.1, 'reproduction_rate': 0.2},
-        'Allele2': {'survivability': 2, 'mortality_rate': 0.1, 'reproduction_rate': 0.2},
-        'Allele3': {'survivability': 2, 'mortality_rate': 0.1, 'reproduction_rate': 0.2},
-        'Allele4': {'survivability': 2, 'mortality_rate': 0.1, 'reproduction_rate': 0.2}
+        'Allele1': {'survivability': 2, 'mortality_rate': 0.1, 'reproduction_rate': 0.2}, # survivability is the number of times the allele is repeated in the weighted_population
+        'Allele2': {'survivability': 2, 'mortality_rate': 0.1, 'reproduction_rate': 0.2}, # mortality_rate is the probability of the individual dying
+        'Allele3': {'survivability': 2, 'mortality_rate': 0.1, 'reproduction_rate': 0.2}, # reproduction_rate is the probability of the individual reproducing
+        'Allele4': {'survivability': 2, 'mortality_rate': 0.1, 'reproduction_rate': 0.2}  # survivability, mortality_rate, and reproduction_rate can be adjusted as needed
     }
 
     species_list = [Species(initial_population, alleles_data, food_per_generation)]
