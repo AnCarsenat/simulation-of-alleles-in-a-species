@@ -1,3 +1,4 @@
+![Figure_1](https://github.com/user-attachments/assets/cbddc2eb-0a72-4aa0-b4cd-ff7e3a5b9721)
 # Simulation of Alleles in a Species
 a md template ;-;
 
