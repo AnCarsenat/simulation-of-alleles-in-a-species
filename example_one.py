@@ -2,10 +2,10 @@ from main import Species, Simulation
 from matplotlib import pyplot as plt
 
 initial_population = 40 # Adjust this value as needed this is how many individuals are in the start population
-generations = 500 # Adjust this value as needed this is how many generations the simulation will run for
-food_per_generation = 400  # Adjust this value as needed this is how much food is available per generation
+generations = 100 # Adjust this value as needed this is how many generations the simulation will run for
+food_per_generation = 1000000000000000  # Adjust this value as needed this is how much food is available per generation
 alleles_data = {
-    'Allele1': {'fitness_score': 5, 'mortality_rate': 0.1, 'reproduction_rate': 0.2}, # fitness_score is the number of times the allele is repeated in the weighted_population ==> How much likely he can eat food
+    'Allele1': {'fitness_score': 3, 'mortality_rate': 0.1, 'reproduction_rate': 0.3}, # fitness_score is the number of times the allele is repeated in the weighted_population ==> How much likely he can eat food
     'Allele2': {'fitness_score': 2, 'mortality_rate': 0.1, 'reproduction_rate': 0.2}, # mortality_rate is the probability of the individual dying
     'Allele3': {'fitness_score': 2, 'mortality_rate': 0.1, 'reproduction_rate': 0.2}, # reproduction_rate is the probability of the individual reproducing
     'Allele4': {'fitness_score': 2, 'mortality_rate': 0.1, 'reproduction_rate': 0.2}  # survivability, mortality_rate, and reproduction_rate can be adjusted as needed
