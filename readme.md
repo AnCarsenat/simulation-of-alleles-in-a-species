@@ -3,6 +3,7 @@
 a md template ;-;
 
 This project simulates the distribution of alleles in a species over time. It uses various parameters to model genetic drift, selection, mutation, and migration.
+If you to try with no instalation ==> [CLIK HERE FOR JUPITER LAB](https://jupyter.org/try-jupyter/lab/index.html?path=notebooks%2FIntro.ipynb)
 
 ## Table of Contents
 - [Introduction](#introduction)
